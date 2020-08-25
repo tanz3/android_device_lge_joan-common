@@ -1,0 +1,5 @@
+allow vndservicemanager init:process { getattr };
+allow vndservicemanager init:binder { transfer };
+allow vndservicemanager init:dir { search };
+allow vndservicemanager init:file { read open };
+allow vndservicemanager system_file:file { read open getattr execute };

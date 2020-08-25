@@ -1,7 +1,18 @@
-type thermal-engine_prop, property_type;
-type camera-hal_prop, property_type;
-type rild_prop, property_type;
-type qti-shell_prop, property_type;
-type baseband_prop, property_type;
-type hifi_dac_prop, property_type;
-type power_prop, property_type;
+# cnss-daemon
+type cnss_prop, property_type;
+
+# Fingerprint
+type vendor_fp_prop, property_type;
+
+# Sensors
+type sensors_panel_prop, property_type;
+type vendor_sensors_prop, property_type;
+
+# Spectrum
+type spectrum_prop, property_type;
+
+# Thermal engine
+type thermal_prop, property_type;
+
+# Dirac
+type dirac_prop, property_type;

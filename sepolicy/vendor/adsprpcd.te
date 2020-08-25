@@ -1,1 +1,2 @@
-allow adsprpcd rootfs:dir { read };
+allow adsprpcd_file adsprpcd_file:filesystem { associate relabelto };
+allow adsprpcd persist_debug_prop:file { read open getattr };

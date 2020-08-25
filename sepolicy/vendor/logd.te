@@ -1,0 +1,8 @@
+allow logd shell_data_file:file { create append open setattr getattr write };
+allow logd shell_data_file:dir { read write open add_name };
+allow logd logdr_socket:sock_file { write };
+allow logd init:unix_stream_socket { read write };
+allow logd cache_file:lnk_file { read };
+allow logd cache_file:dir { write read open add_name };
+allow logd cache_file:file { setattr getattr create append open };
+allow logd logd:capability { chown fsetid dac_override };

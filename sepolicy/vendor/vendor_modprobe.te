@@ -1,0 +1,2 @@
+allow vendor_modprobe persist_debug_prop:file { read open getattr };
+allow vendor_modprobe system_file:file { read open getattr execute setattr };

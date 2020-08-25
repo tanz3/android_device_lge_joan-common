@@ -1,20 +1,19 @@
-allow system_app sysfs:file { write };
-allow system_app baseband_prop:file { read };
-allow system_app time_daemon:unix_stream_socket { connectto };
+# Parts
+allow system_app sysfs_sectouch:file rwx_file_perms;
+allow system_app sysfs_leds:dir search;
+allow system_app {sysfs_sectouch sysfs_graphics }:dir search;
+allow system_app sysfs_graphics:file rwx_file_perms;
 
-allow system_app hifi_dac_prop:file { getattr open read write };
-allow system_app hifi_dac_prop:property_service { set };
+# Spectrum
+allow system_app spectrum_prop:property_service set;
+get_prop(system_app, spectrum_prop);
 
-allow system_app proc_pagetypeinfo:file { getattr open read };
+# Sweep2sleep
+allow system_app sysfs_sts:file rwx_file_perms;
 
-allow system_app sysfs_zram:dir { search };
-allow system_app sysfs_zram:file { getattr open read };
+# Kcal
+allow system_app sysfs_kcal:file rwx_file_perms;
+allow system_app sysfs_kcal:dir { search };
 
-allow system_app perfprofd:binder { call };
-allow system_app wificond:binder { call };
-allow system_app installd:binder { call };
-allow system_app netd:binder { call };
-allow system_app vold:binder { call };
-
-allow system_app sysfs_lge_fingerprint_prepare:file { rw_file_perms };
-allow system_app sysfs_lge_hifi_dac:file { rw_file_perms };
+# FastCharge
+allow system_app sysfs_fastcharge:file rwx_file_perms;

@@ -1,4 +1,6 @@
-allow system_server init:binder { call };
-allow system_server baseband_prop:file { getattr open read };
+# Fingerprint
+allow system_server fingerprint_sysfs:file rw_file_perms;
 
-allow system_server vendor_camera_prop:file { getattr open read };
+get_prop(system_server, vendor_fp_prop)
+
+allow system_server vendor_file:file { read execute };

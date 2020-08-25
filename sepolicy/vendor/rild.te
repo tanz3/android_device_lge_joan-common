@@ -1,7 +1,5 @@
-allow rild vendor_file:file { ioctl };
-set_prop(rild, rild_prop);
-allow rild rild_prop:file { getattr open read };
-allow rild default_android_hwservice:hwservice_manager { add };
+typeattribute rild data_between_core_and_vendor_violators;
+allow rild tombstone_data_file:dir rw_dir_perms;
+allow rild tombstone_data_file:file rw_file_perms;
 
-allow rild bluetooth_prop:file { open read };
-allow rild shell_exec:file { execute };
+allow rild vendor_file:file ioctl;

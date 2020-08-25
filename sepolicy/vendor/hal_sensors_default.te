@@ -1,0 +1,4 @@
+set_prop(hal_sensors_default, vendor_sensors_prop);
+
+allow hal_sensors_default system_file:file { read open getattr execute };
+allow hal_sensors_default sysfs:file { read open };

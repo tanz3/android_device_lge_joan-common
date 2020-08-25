@@ -1,0 +1,3 @@
+allow qrtr qrtr:netlink_route_socket { read write nlmsg_write create };
+allow qrtr qrtr:capability { net_admin };
+allow qrtr system_file:file { read execute };
