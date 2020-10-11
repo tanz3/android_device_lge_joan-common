@@ -97,18 +97,11 @@ TARGET_SCREEN_WIDTH := 1440
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    BluetoothQti \
-    audio.bluetooth.default \
-    android.hardware.bluetooth.audio@2.0-impl \
-    liba2dpoffload \
-    libbtconfigstore \
+    android.hardware.bluetooth@1.0 \
+    libbt-vendor \
     libbthost_if \
-    libhdmiedid \
-    libhfp \
-    libldacBT_dec \
-    libsndmonitor \
-    vendor.qti.hardware.bluetooth_audio@2.0.vendor \
-    vendor.qti.hardware.btconfigstore@1.0.vendor
+    audio.bluetooth.default \
+    android.hardware.bluetooth.audio@2.0-impl
 
 # Camera
 PRODUCT_COPY_FILES += \
@@ -127,12 +120,6 @@ PRODUCT_PACKAGES += \
     libfui \
     Snap
 
-# Connectivity Engine support (CNE)
-PRODUCT_PACKAGES += \
-    cneapiclient \
-    com.quicinc.cne \
-    services-ext
-    
 # DAC
 PRODUCT_PACKAGES += \
     QuadDACPanel \
@@ -147,17 +134,15 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@2.0-impl-2.1 \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
+    copybit.msm8998 \
     gralloc.msm8998 \
     hwcomposer.msm8998 \
     libdisplayconfig \
     liboverlay \
-    libqdMetaData \
     libqdMetaData.system \
     libtinyxml \
     libqservice \
-    memtrack.msm8998 \
-    vendor.display.config@1.9 \
-    vendor.display.config@1.9_vendor
+    memtrack.msm8998
 
 # Doze
 PRODUCT_PACKAGES += \
@@ -208,8 +193,7 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss@2.0-service-qti \
     libbatching \
     libgeofencing \
-    libgnss \
-    libwifi-hal-ctrl
+    libgnss
 
 # GPS Config
 PRODUCT_COPY_FILES += \
